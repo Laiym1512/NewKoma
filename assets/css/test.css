@@ -60,12 +60,12 @@ to {
     scroll-behavior: smooth;
 }
 :root {
-    --main-color:  #36699f;
-    --accent-color:  #5984b1;
-    --main-color-fixed:  #36699f;
+    --main-color:  #323436;
+    --accent-color:  #323436;
+    --main-color-fixed:  #323436;
     --text-color:  #252429;
     --opp-color:  white;
-    --bg-color:  #e8e8e6;
+    --bg-color:  #e6e7e8;
     --bg-color2:  #f2f2f2;
     --bg-color3:  #e3e3e3;
     --rr-color:  #ffa50a;
@@ -2240,7 +2240,7 @@ img, video {
 }
 .bg-\[\#36699f\] {
     --tw-bg-opacity:  1;
-    background-color: rgb(54 105 159/var(--tw-bg-opacity));
+    background-color: rgb(1 1 1/var(--tw-bg-opacity));
 }
 .bg-\[\#507ba9\] {
     --tw-bg-opacity:  1;
