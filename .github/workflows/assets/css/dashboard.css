@@ -1,0 +1,376 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Metropolis-Regular', sans-serif;
+   color: #000;
+}
+.sidebar{
+  position: fixed;
+  height: 100%;
+  width: 300px;
+  background: #fff;
+  transition: all 0.5s ease;
+  border-left: 3px solid #ffe238;
+  border-right: 3px solid #ffe238;
+  padding-top: 2rem;
+}
+.sidebar.active{
+  width: 60px;
+}
+.sidebar .logo-details {
+  text-align: center;
+}
+.sidebar .logo-details .logo img{
+  width: 100%;
+  max-width: 130px;
+  margin: auto;
+}
+.sidebar .nav-links{
+  margin-top: 15%;
+  text-align: center;
+}
+.sidebar .nav-links li{
+  position: relative;
+  list-style: none;
+  margin-bottom:2px;
+}
+.sidebar .nav-links li a{
+    display:block;
+  height: 100%;
+  width: 100%;
+  text-decoration: none;
+  transition: all 0.4s ease;
+  padding:15px 0;
+}
+.sidebar .nav-links li a.active,
+.sidebar .nav-links li a:hover{
+    background-color:#ffe238;
+  color: #000;
+}
+.sidebar .nav-links li i{
+  min-width: 60px;
+  text-align: center;
+  font-size: 18px;
+}
+.sidebar .nav-links li a .links_name{
+  font-size: 14px;
+  text-transform: uppercase;
+}
+.sidebar .nav-links .log_out{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+main .navbar-toggle {
+    padding: 12px 10px;
+    background-color: transparent;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    z-index: 99;
+    cursor: pointer;
+}
+main .navbar-toggle:focus {outline: inherit;}
+main .navbar-toggle .icon-bar {
+    background-color: #bb992b
+}
+main .navbar-toggle .icon-bar+.icon-bar {margin-top: 4px;}
+main .navbar-toggle .icon-bar {display: block; width: 30px; height: 4px; border-radius: 1px;}
+main .navbar-toggle.open {display: none; }
+main .navbar-toggle.in:after {
+    content: '\f00d';
+    display: block;
+    font-family: FontAwesome;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translate(0%, -50%);
+    color: #fff;
+    font-size: 32px;
+    font-weight: normal;
+}
+
+main.home-section{
+  position: relative;
+  min-height: 100vh;
+  width: calc(100% - 300px);
+  left: 300px;
+  text-align: left;
+  transition: all 0.5s ease;
+  padding-top: 2rem;
+}
+.sidebar.active ~ .home-section{
+  width: calc(100% - 60px);
+  left: 60px;
+}
+main.home-section nav{
+  display: flex;
+  justify-content: space-between;
+  height: 100px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  width: calc(100% - 300px);
+  left: 300px;
+  top: 0;
+  z-index: 100;
+  padding: 0 40px;
+  transition: all 0.5s ease;
+}
+.sidebar.active ~ .home-section nav{
+  left: 60px;
+  width: calc(100% - 60px);
+}
+main.home-section nav .sidebar-button{
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  font-weight: 500;
+}
+main.home-section nav .sidebar-button span{
+  font-size: 30px;
+  color: #585656;
+  text-transform: uppercase;
+  font-family: 'Metropolis-SemiBold';
+}
+main.home-section nav .log_out a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+  border: 2px solid #ffe238;
+  padding: 10px 15px;
+  font-family: 'Metropolis-Bold';
+}
+
+main.home-section .home-content{
+  position: relative;
+  padding-top: 104px;
+  background-image: url(../source/dashboard-content.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+main .title {
+  font-size: 20px;
+  font-family: 'Metropolis-Bold';
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+}
+main .button {padding: 5px 0px;}
+main .button a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 16px;
+  border-radius: 25px;
+  background-color: #ffe238;
+  font-family: 'Metropolis-Bold';
+  width: 100%;
+  display: block;
+  max-width: 160px;
+  text-align: center;
+  padding: 10px 5px;
+}
+
+main .row-section {
+  display: grid;
+  grid-template-columns: 70% 28.5%;
+  padding: 0px 40px;
+  grid-gap: 20px;
+}
+
+main .row-section .staking-section .content {
+  border: 2px solid #ffe238;
+  display: grid;
+  grid-template-columns: auto auto;
+  padding: 20px;
+  grid-gap: 20px;
+}
+main .row-section .staking-section h5 {font-size: 18px; margin-bottom: 10px; font-weight: 500;}
+main .row-section .staking-section table {width: 100%; max-width: 400px; border-collapse: collapse; margin-bottom: 10px; margin-right: 20%;}
+main .row-section .staking-section table td {padding: 10px 15px; font-size: 14px;}
+main .row-section .staking-section table tr:first-child {background-color: #ffffff!important;}
+main .row-section .staking-section table tr:nth-child(even) {background-color: #ffe238;}
+main .row-section .staking-section table tr:nth-child(odd) {background-color: #ffee89;}
+
+main .row-section .staking-section .images {text-align: center; position: relative;}
+main .row-section .staking-section .images .number {
+  position: absolute; 
+  top: 50%;
+  transform: translate(0%,-50%);
+  left: 0;
+  right: 0;
+  color: #541f00;
+  font-family: 'Metropolis-Bold';
+}
+main .row-section .staking-section .amount {text-align: center;}
+main .row-section .staking-section .amount span {text-transform: uppercase; font-weight: 600;}
+main .row-section .staking-section .amount p {color: #000000; font-size: 12px;}
+main .row-section .staking-section .amount-section .button {text-align: center;}
+main .row-section .staking-section .amount-section .button a {margin: auto;}
+
+main .row-section .notifaction-section {
+  background-image: url(../source/notification-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+main .row-section .notifaction-section .heading {
+  background-color: #ffe238; 
+  padding: 10px 0px;
+  text-align: center;
+  margin-top: 20px;
+}
+main .row-section .notifaction-section .heading span {
+  font-size: 24px;
+  font-family: 'Metropolis-Bold';
+  border-left: 2px solid #000;
+  border-right: 2px solid #000;
+  padding: 0px 20px;
+}
+main .row-section .notifaction-section .row {width: 100%; max-width: 300px; margin: 25px auto;}
+main .row-section .notifaction-section p {
+  color: #000!important;
+  font-size: 16px;
+  margin-bottom: 0px!important;
+  font-family: 'Metropolis-Bold';
+  text-transform: uppercase;
+}
+
+main .row-section2 {padding: 20px 40px;}
+main .row-section2 .button {padding: 0px;}
+main .row-section2 .button a {padding: 5px 25px;}
+main .row-section2 .content {border: 2px solid #ffe238; padding: 20px;}
+main .row-section2 h5 {font-size: 16px; text-transform: uppercase; margin-bottom: 10px; font-weight: 500;}
+main .row-section2 .sub-title {
+   font-size: 16px;
+   font-family: 'Metropolis-Bold';
+   margin-bottom: 10px;
+}
+main .row-section2 .rewards-earn {padding: 5px 0px;}
+main .row-section2 .rewards-earn table {width: 100%; max-width: 800px; border-collapse: collapse; margin-bottom: 10px; }
+main .row-section2 .rewards-earn table td {padding: 10px 15px; font-size: 14px;}
+main .row-section2 .rewards-earn table tr:nth-child(even) {background-color: #ffe238;}
+main .row-section2 .rewards-earn table tr:nth-child(odd) {background-color: #ffee89;}
+
+main .row-section2 .total-rewards {padding: 5px 0px;}
+main .row-section2 .total-rewards .sub-title {
+  text-transform: uppercase;
+  font-size: 21px;
+}
+main .row-section2 .total-rewards table {width: 100%; max-width: 800px; border-collapse: collapse; }
+main .row-section2 .total-rewards table td {padding: 10px 15px; font-size: 14px;}
+
+main .row-section2 .seed-wallet {padding: 15px 0px 5px;}
+main .row-section2 .seed-wallet table {width: 100%; max-width: 580px; border-collapse: collapse; }
+main .row-section2 .seed-wallet table tr {background-color: #f9f9f9;}
+main .row-section2 .seed-wallet table td {padding: 10px 15px; font-size: 14px;}
+main .row-section2 .seed-button {padding: 10px 0px;}
+main .row-section2 .seed-button .button {display: inline-block;}
+
+main .row-section2 .farm-wallet {padding: 15px 0px 5px;}
+main .row-section2 .farm-wallet table {width: 100%; max-width: 300px; border-collapse: collapse; }
+main .row-section2 .farm-wallet table td {padding: 10px 15px; font-size: 14px;}
+
+footer {position: relative; z-index: 1;}
+footer .copyright {
+  text-align: center; 
+  background-color: #ffe238; 
+  padding: 15px 0;
+  font-size: 13px;
+}
+
+/*#############################################################*/
+@media (min-width: 1024px) {
+main .navbar-toggle {display: none;}
+}
+
+@media (max-width: 1024px) {
+  .sidebar{
+    /*width: 60px;*/
+    width: 0px;
+  }
+  .sidebar.active{
+    width: 220px;
+  }
+  main.home-section{
+    /*width: calc(100% - 60px);
+    left: 60px;*/
+    width: 100%;
+    left: 0px;
+  }
+  .sidebar.active ~ main.home-section{
+    /* width: calc(100% - 220px); */
+    overflow: hidden;
+    left: 220px;
+  }
+  main.home-section nav{
+    /*width: calc(100% - 60px);
+    left: 60px;*/
+    width: 100%;
+    left: 0px;
+  }
+  .sidebar.active ~ main.home-section nav{
+    width: calc(100% - 220px);
+    left: 220px;
+  }
+  nav .sidebar-button .dashboard{
+    display: none;
+  }
+}
+
+@media (max-width: 991px) {
+  
+}
+
+@media (max-width: 767px) {
+main .row-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+main .row-section .staking-section {order: 2}
+main .row-section .notifaction-section {order: 1}
+main.home-section nav {padding: 0px 15px;}
+main .row-section {padding: 0px 15px;}
+main .row-section2 {padding: 20px 15px;}
+}
+
+@media (max-width: 580px) {
+main .row-section .staking-section .content{grid-template-columns: 1fr;}
+main .row-section .staking-section table {margin-right: 0px; max-width: 100%;}
+main .row-section table,
+main .row-section2 table {display: block; overflow-y: scroll;}
+main .row-section table tbody,
+main .row-section2 table tbody {display: block;}
+}
+
+@media (max-width: 400px) {
+main .row-section .staking-section .content,
+main .row-section2 .content {padding: 20px 10px;}
+  /*.sidebar{
+    width: 0;
+  }
+  .sidebar.active{
+    width: 60px;
+  }
+  main.home-section{
+    width: 100%;
+    left: 0;
+  }
+  .sidebar.active ~ main.home-section{
+    left: 60px;
+    width: calc(100% - 60px);
+  }
+  main.home-section nav{
+    width: 100%;
+    left: 0;
+  }
+  .sidebar.active ~ main.home-section nav{
+    left: 60px;
+    width: calc(100% - 60px);
+  }*/
+}
