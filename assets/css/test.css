@@ -197,7 +197,7 @@ max-width: 70vw;
     font-size: var(--big-font);
     font-weight: 700;
     line-height: 1.2;
-    margin-bottom: 2rem;
+    margin-bottom: 0rem;
     color: var(--text-color);
 }
 .home-text p {
@@ -1887,7 +1887,7 @@ img, video {
     margin-top: .5rem;
 }
 .mt-20 {
-    margin-top: 5rem;
+    margin-top: 1.5rem;
 }
 .mt-3 {
     margin-top: .75rem;
