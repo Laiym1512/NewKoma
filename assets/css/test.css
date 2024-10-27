@@ -49,8 +49,17 @@ to {
     opacity: 1;
     transform: translateY(0);
 }
+
 }.animator-hidden {
     display: none;
+}
+
+
+.flexb
+{
+    text-align: center;
+    display: flex;
+    justify-content: center;
 }
 * {
     padding: 0;
@@ -2667,7 +2676,6 @@ html, body, #root, .app {
     height: 100%;
     width: 100%;
     font-family: Poppins, sans-serif;
-    overflow-x:  hidden;
 }
 .before\:hidden:before {
     content: var(--tw-content);
